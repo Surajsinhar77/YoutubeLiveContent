@@ -28,6 +28,7 @@ function Login() {
             response.json().then((data)=>{
                 alert(data.msg);
                 LoginFunction(data.data, data.accessToken);
+                console.log("In the login page : ", userData);
             })
             navigate('/');
         }).catch((err)=>{

@@ -14,7 +14,7 @@ function App() {
     <> 
       <Router>
           <Routes>
-            {(userData)?  
+            {(localStorage.getItem('userdata'))?  
                 <>
                   <Route exact path='/' element={<Home/>}/>
                   <Route path='*' element={<PageNotFound/>}/> 
@@ -24,7 +24,7 @@ function App() {
                 {console.log("here is the inside of route after login userData : ",userData)}
                   <Route exact path='/login' element={<Login/>}/>
                   <Route path='/register' element={<SignUp/>} />  
-                  <Route path='*' element={<Login/>}/>
+                  <Route path='*' element={<PageNotFound/>}/>
                 </>
             }
           </Routes>
