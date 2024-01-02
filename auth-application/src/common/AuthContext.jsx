@@ -1,5 +1,4 @@
 import { useContext, createContext , useState} from "react";
-
 const AuthContext = createContext();
 
 export function AuthProvider({children}){
@@ -11,10 +10,8 @@ export function AuthProvider({children}){
 
     function LoginFunction(userdata,userToken){
         setuserData(userData);
-        console.log("i am in the Login function here ", userdata, userToken);
         localStorage.setItem("userdata", JSON.stringify(userdata));
         localStorage.setItem("userToken", userToken);
-        
     }
 
     function LogOutUser(){

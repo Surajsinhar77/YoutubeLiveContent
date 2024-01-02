@@ -15,14 +15,18 @@ function App() {
       <Router>
           <Routes>
             {(userData)?  
-                <Route exact path='/' element={<Home/>}/> 
+                <>
+                  <Route exact path='/' element={<Home/>}/>
+                  <Route path='*' element={<PageNotFound/>}/> 
+                </>
               :
                 <>
+                {console.log("here is the inside of route after login userData : ",userData)}
                   <Route exact path='/login' element={<Login/>}/>
                   <Route path='/register' element={<SignUp/>} />  
+                  <Route path='*' element={<Login/>}/>
                 </>
             }
-            <Route path='*' element={<PageNotFound/>}/>
           </Routes>
         
       </Router>

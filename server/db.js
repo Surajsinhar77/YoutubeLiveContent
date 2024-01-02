@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const  url = 'mongodb://localhost:27017'
+const  url = 'mongodb+srv://admin:N0H6JQXIHq2s8Fdr@atlascluster.l14gp7p.mongodb.net/?retryWrites=true&w=majority'
 
 async function toConnectDatabase(){
     console.log("Is this Function is called")

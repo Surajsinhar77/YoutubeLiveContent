@@ -15,7 +15,6 @@ function Login() {
     }
 
     function apiCallFor(){
-        console.log(localStorage.getItem('userToken'))
         fetch('http://localhost:8000/login',
             {
                 method:"POST",
@@ -29,8 +28,8 @@ function Login() {
             response.json().then((data)=>{
                 alert(data.msg);
                 LoginFunction(data.data, data.accessToken);
-                navigate('/');
             })
+            navigate('/');
         }).catch((err)=>{
             alert(err.msg);
             console.log(err);
