@@ -4,7 +4,7 @@ const AuthContext = createContext();
 export function AuthProvider({children}){
     const [userExist, setuserExist] = useState(localStorage.getItem('userExist')? true : false);
     const [userData, setuserData] = useState(()=>{
-        return localStorage.getItem('userdata') || null;
+        return JSON.parse(localStorage.getItem('userdata')) || null;
     });
 
 

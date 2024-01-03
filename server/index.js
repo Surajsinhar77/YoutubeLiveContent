@@ -85,9 +85,13 @@ app.post('/register', async (req,res)=>{
     }
 })
 
-app.get('/', (req,res)=>{
-    console.log(createToken({email: 'sinha123@gmail.com', role: "admin"}));
-    res.json({mes:"somethings"});
+app.get('/userdatas', loginTokenVerfication, async(req,res)=>{
+    try{
+        const allUserData = await userModel.find({});
+        return res.status(200).json({msg:"Data Sucessfull sent", data : allUserData});
+    }catch(err){
+        return res.json({msg:err.message, error : err});
+    }
 })
 
 app.listen(8000, function(){

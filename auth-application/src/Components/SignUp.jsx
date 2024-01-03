@@ -10,7 +10,6 @@ function SignUp() {
         )
     }
 
-
     function apiCallFor() {
         const options = {
             method: 'POST',
