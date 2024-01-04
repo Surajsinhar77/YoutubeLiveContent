@@ -25,6 +25,10 @@ function Profile() {
                         <label htmlFor="">Phone</label>
                         <input type="text" placeholder={userData.phoneno} className='border border-gray-300 px-2 py-1'/>
                     </div>
+
+                    <div className="actionButtons">
+                        div.
+                    </div>
                 </div>
             </div>
         </div>
