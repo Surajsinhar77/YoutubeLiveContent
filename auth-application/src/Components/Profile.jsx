@@ -13,13 +13,13 @@ function Profile() {
         return false;
     }
 
-    const fullname = document.querySelector('.fullName');
-    const email = document.querySelector('.email');
-    const phoneno = document.querySelector('.phoneno');
+    // const fullname = document.querySelector('.fullName');
+    // const email = document.querySelector('.email');
+    // const phoneno = document.querySelector('.phoneno');
 
-    fullname.addEventListener('change', ()=>{
+    // fullname.addEventListener('change', ()=>{
         
-    })
+    // })
 
     return (
         <div>
